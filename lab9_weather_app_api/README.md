@@ -1,6 +1,6 @@
 # 🌤️ Weather App (Flutter + Provider + Open-Meteo API)
 
-แอปพลิเคชันพยากรณ์อากาศที่พัฒนาด้วย Flutter แสดงข้อมูลสภาพอากาศปัจจุบันและพยากรณ์ล่วงหน้า 10 วัน โดยดึงข้อมูลจาก Open-Meteo API พร้อมระบบค้นหาจังหวัดและเปลี่ยนสี UI ตามอุณหภูมิ
+แอปพลิเคชันพยากรณ์อากาศที่พัฒนาด้วย Flutter แสดงข้อมูลสภาพอากาศปัจจุบันและพยากรณ์ล่วงหน้า 10 วัน โดยดึงข้อมูลจาก Open-Meteo API
 
 ## ✨ คุณสมบัติ (Features)
 
@@ -50,8 +50,10 @@ lib/
     flutter run -d chrome
     ```
 
-## 📝 บันทึกการพัฒนา
-โปรเจ็กต์นี้เป็นส่วนหนึ่งของวิชาห้องปฏิบัติการ (Lab 9) เน้นการเรียนรู้เรื่องการใช้งาน **Asynchronous Programming**, **API Integration**, และ **Provider Pattern** ใน Flutter
+## ขั้นตอนการทดสอบ
+| หน้าแรก(Current) | พยากรล่วงหน้า 10 วัน | ค้นหาสภาพอากาศ | ปรับสีพื้นหลังตามสภาพอากาศ |
+| :---: | :---: | :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/ce418a37-ace4-4a96-bbb6-81aeccd3037d" width="200" /> | <img src="https://github.com/user-attachments/assets/f6206d69-4db8-4bd4-b1f9-d6b7f4710e38" width="200" /> | <img src="https://github.com/user-attachments/assets/acabf19e-ad7e-4d6c-b4ef-5392bd1c24bb" width="200" /> | <img src="https://github.com/user-attachments/assets/1bdfe2a6-86bf-47dd-9fa7-fd9dfe3bd8d8" width="200" /> |
+
 
 ---
-สร้างด้วย ❤️ โดย Gemini AI และทีมพัฒนา
