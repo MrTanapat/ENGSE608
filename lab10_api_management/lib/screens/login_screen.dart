@@ -49,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             TextField(
               controller: _passController,
-              decoration: const InputDecoration(labelText: 'Password (m38rmn=)'),
+              decoration: const InputDecoration(labelText: 'Password (m38rmF\$)'),
               obscureText: true,
             ),
             const SizedBox(height: 30),
