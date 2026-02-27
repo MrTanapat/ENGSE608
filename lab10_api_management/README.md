@@ -29,7 +29,6 @@
 * **API Connection**: HTTP Client
 * **Backend API**: [FakeStoreAPI](https://fakestoreapi.com/)
 
-## 🏗️ โครงสร้างโปรเจกต์ (Project Structure)
 ## 📂 โครงสร้างโปรเจ็กต์ (Project Structure)
 ```text
 lib/
@@ -77,9 +76,7 @@ lib/
 | :---: | :---: | :---: | :---: |
 | <img width="400" src="https://github.com/user-attachments/assets/c9bebdfa-eba7-4184-993a-320a1cd2113e" />| <img width="400" src="https://github.com/user-attachments/assets/16b8c7ef-3c18-42eb-87fc-e3d4bb6f5bec" />| <img width="411"  src="https://github.com/user-attachments/assets/579b5353-28d0-4a37-b664-07ade43ad748" />| <img width="400" src="https://github.com/user-attachments/assets/57d1f38d-4074-4c0b-82f1-e40a969b27b9" />|
 
-| เพื่มจำนวนสินค้า | Admin login | User login | ตระกร้าสินค้า |
-| :---: | :---: | :---: | :---: |
-| <img width="400" src="https://github.com/user-attachments/assets/9829c7d7-9c66-4d3f-ba3a-7c622a9757a9" />
-| 
- | <img width="411"  src="https://github.com/user-attachments/assets/579b5353-28d0-4a37-b664-07ade43ad748" />| <img width="400" src="https://github.com/user-attachments/assets/57d1f38d-4074-4c0b-82f1-e40a969b27b9" />|
+| เพื่ม/ลด จำนวนสินค้า | รายละเอียดสินค้า |
+| :---: | :---: |
+| <img width="400" src="https://github.com/user-attachments/assets/9829c7d7-9c66-4d3f-ba3a-7c622a9757a9" /> | <img width="400" src="https://github.com/user-attachments/assets/d3e153e4-534a-451e-917e-a521d7af7e15" />
 
