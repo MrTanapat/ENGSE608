@@ -51,11 +51,9 @@ lib/
     ```
 
 ## ขั้นตอนการทดสอบ
-### ขั้นตอนการทดสอบ
 | หน้าแรก(Current) | พยากรล่วงหน้า 10 วัน | ค้นหาสภาพอากาศ | ปรับสีพื้นหลังตามสภาพอากาศ |
 | :---: | :---: | :---: | :---: |
-| <img width="400" height="900" src="https://github.com/user-attachments/assets/ce418a37-ace4-4a96-bbb6-81aeccd3037d" /> | <img width="400" height="900" src="https://github.com/user-attachments/assets/f6206d69-4db8-4bd4-b1f9-d6b7f4710e38" /> |<img width="400" height="900" src="https://github.com/user-attachments/assets/acabf19e-ad7e-4d6c-b4ef-5392bd1c24bb" /> | <img width="400" height="900" src="https://github.com/user-attachments/assets/1bdfe2a6-86bf-47dd-9fa7-fd9dfe3bd8d8" /> |
-| :---: | :---: | :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/ce418a37-ace4-4a96-bbb6-81aeccd3037d" width="200" /> | <img src="https://github.com/user-attachments/assets/f6206d69-4db8-4bd4-b1f9-d6b7f4710e38" width="200" /> | <img src="https://github.com/user-attachments/assets/acabf19e-ad7e-4d6c-b4ef-5392bd1c24bb" width="200" /> | <img src="https://github.com/user-attachments/assets/1bdfe2a6-86bf-47dd-9fa7-fd9dfe3bd8d8" width="200" /> |
 
 
 ---
