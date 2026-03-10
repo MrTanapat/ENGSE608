@@ -68,9 +68,11 @@ lib/
     ```
 
 ## ขั้นตอนการทดสอบ
-| หน้าแรก(Current) | พยากรล่วงหน้า 10 วัน | ค้นหาสภาพอากาศ | ปรับสีพื้นหลังตามสภาพอากาศ |
-| :---: | :---: | :---: | :---: |
-| <img src="https://github.com/user-attachments/assets/ce418a37-ace4-4a96-bbb6-81aeccd3037d" width="200" /> | <img src="https://github.com/user-attachments/assets/f6206d69-4db8-4bd4-b1f9-d6b7f4710e38" width="200" /> | <img src="https://github.com/user-attachments/assets/acabf19e-ad7e-4d6c-b4ef-5392bd1c24bb" width="200" /> | <img src="https://github.com/user-attachments/assets/1bdfe2a6-86bf-47dd-9fa7-fd9dfe3bd8d8" width="200" /> |
+| หน้าแรก | รายละเอียดปัญหา | สถิติรายงานปัญหา | ปรับสีพื้นหลังตามสภาพอากาศ | ปรับสีพื้นหลังตามสภาพอากาศ |
+| :---: | :---: | :---: | :---: | :---: |
+| <img width="200" src="https://github.com/user-attachments/assets/056f5c0d-2424-49d9-894d-7f33e1ae0e33" />| <img width="200" src="https://github.com/user-attachments/assets/1b559784-c3da-4ae8-857a-5b9c180ed756" />
+| <img width="200" src="https://github.com/user-attachments/assets/3bbe28e1-4c31-4c76-aecd-029f0fd53566" />| <img width="200" src="https://github.com/user-attachments/assets/23817790-0511-443b-8b13-a03c8c07eb9b" />| <img width="200" src="https://github.com/user-attachments/assets/563756e9-8a72-4908-9b26-acad45d48104" />
+
 
 
 ---
