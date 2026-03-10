@@ -31,21 +31,19 @@ class ProblemDetailScreen extends StatelessWidget {
               IconButton(
                 icon: const Icon(Icons.delete),
                 onPressed: () => _showDeleteDialog(context, provider, problem),
-                tooltip: 'ลบ',
               ),
             ],
           ),
           body: ListView(
             padding: const EdgeInsets.all(16),
             children: [
-              // Category Badge
               Row(
                 children: [
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color:
-                          _getCategoryColor(problem.category).withOpacity(0.1),
+                      color: _getCategoryColor(problem.category)
+                          .withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Text(
@@ -80,8 +78,6 @@ class ProblemDetailScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 24),
-
-              // Title
               const Text(
                 'หัวข้อ',
                 style: TextStyle(
@@ -99,8 +95,6 @@ class ProblemDetailScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 24),
-
-              // Description
               const Text(
                 'รายละเอียด',
                 style: TextStyle(
@@ -123,8 +117,6 @@ class ProblemDetailScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 24),
-
-              // Location
               _buildInfoCard(
                 icon: Icons.location_on,
                 title: 'สถานที่',
@@ -132,12 +124,8 @@ class ProblemDetailScreen extends StatelessWidget {
                 color: Colors.red,
               ),
               const SizedBox(height: 16),
-
-              // Status
               _buildStatusCard(context, provider, problem),
               const SizedBox(height: 16),
-
-              // Dates
               _buildInfoCard(
                 icon: Icons.access_time,
                 title: 'รายงานเมื่อ',
@@ -169,9 +157,9 @@ class ProblemDetailScreen extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.05),
+        color: color.withValues(alpha: 0.05),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.withOpacity(0.2)),
+        border: Border.all(color: color.withValues(alpha: 0.2)),
       ),
       child: Row(
         children: [
@@ -206,17 +194,14 @@ class ProblemDetailScreen extends StatelessWidget {
   }
 
   Widget _buildStatusCard(
-    BuildContext context,
-    ProblemProvider provider,
-    Problem problem,
-  ) {
+      BuildContext context, ProblemProvider provider, Problem problem) {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: _getStatusColor(problem.status).withOpacity(0.05),
+        color: _getStatusColor(problem.status).withValues(alpha: 0.05),
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: _getStatusColor(problem.status).withOpacity(0.2),
+          color: _getStatusColor(problem.status).withValues(alpha: 0.2),
         ),
       ),
       child: Column(
@@ -231,72 +216,14 @@ class ProblemDetailScreen extends StatelessWidget {
               ),
               const SizedBox(width: 16),
               Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'สถานะปัจจุบัน',
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.grey.shade600,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      problem.statusText,
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: _getStatusColor(problem.status),
-                      ),
-                    ),
-                  ],
+                child: Text(
+                  problem.statusText,
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: _getStatusColor(problem.status),
+                  ),
                 ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 16),
-          const Divider(),
-          const SizedBox(height: 8),
-          const Text(
-            'อัพเดทสถานะ',
-            style: TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          const SizedBox(height: 12),
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
-            children: [
-              _buildStatusButton(
-                context,
-                provider,
-                problem,
-                'pending',
-                'รอดำเนินการ',
-                Icons.pending,
-                Colors.orange,
-              ),
-              _buildStatusButton(
-                context,
-                provider,
-                problem,
-                'in_progress',
-                'กำลังแก้ไข',
-                Icons.refresh,
-                Colors.blue,
-              ),
-              _buildStatusButton(
-                context,
-                provider,
-                problem,
-                'resolved',
-                'เสร็จสิ้น',
-                Icons.check_circle,
-                Colors.green,
               ),
             ],
           ),
@@ -305,62 +232,13 @@ class ProblemDetailScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildStatusButton(
-    BuildContext context,
-    ProblemProvider provider,
-    Problem problem,
-    String status,
-    String label,
-    IconData icon,
-    Color color,
-  ) {
-    final isSelected = problem.status == status;
-
-    return ElevatedButton.icon(
-      onPressed: isSelected
-          ? null
-          : () async {
-              try {
-                await provider.updateStatus(problem.id!, status);
-                if (context.mounted) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text('✅ เปลี่ยนสถานะเป็น "$label" แล้ว'),
-                      backgroundColor: Colors.green,
-                    ),
-                  );
-                }
-              } catch (e) {
-                if (context.mounted) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text('❌ เกิดข้อผิดพลาด: $e'),
-                      backgroundColor: Colors.red,
-                    ),
-                  );
-                }
-              }
-            },
-      icon: Icon(icon, size: 18),
-      label: Text(label),
-      style: ElevatedButton.styleFrom(
-        backgroundColor: isSelected ? color : Colors.grey.shade100,
-        foregroundColor: isSelected ? Colors.white : Colors.black87,
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-      ),
-    );
-  }
-
   void _showDeleteDialog(
-    BuildContext context,
-    ProblemProvider provider,
-    Problem problem,
-  ) {
+      BuildContext context, ProblemProvider provider, Problem problem) {
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
+      builder: (_) => AlertDialog(
         title: const Text('ยืนยันการลบ'),
-        content: Text('คุณต้องการลบรายงาน "${problem.title}" ใช่หรือไม่?'),
+        content: Text('คุณต้องการลบ "${problem.title}" หรือไม่'),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
@@ -368,34 +246,13 @@ class ProblemDetailScreen extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () async {
-              try {
-                await provider.deleteProblem(problem.id!);
-                if (context.mounted) {
-                  Navigator.pop(context); // ปิด dialog
-                  Navigator.pop(context); // กลับหน้าหลัก
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text('✅ ลบรายงานเรียบร้อยแล้ว'),
-                      backgroundColor: Colors.green,
-                    ),
-                  );
-                }
-              } catch (e) {
-                if (context.mounted) {
-                  Navigator.pop(context);
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text('❌ เกิดข้อผิดพลาด: $e'),
-                      backgroundColor: Colors.red,
-                    ),
-                  );
-                }
+              await provider.deleteProblem(problem.id!);
+              if (context.mounted) {
+                Navigator.pop(context);
+                Navigator.pop(context);
               }
             },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.red,
-              foregroundColor: Colors.white,
-            ),
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
             child: const Text('ลบ'),
           ),
         ],
@@ -451,6 +308,10 @@ class ProblemDetailScreen extends StatelessWidget {
   }
 
   String _formatDateTime(DateTime dateTime) {
-    return DateFormat('d MMMM yyyy, HH:mm น.', 'th').format(dateTime);
+    try {
+      return DateFormat('d MMMM yyyy, HH:mm น.', 'th').format(dateTime);
+    } catch (_) {
+      return DateFormat('yyyy-MM-dd HH:mm').format(dateTime);
+    }
   }
 }
