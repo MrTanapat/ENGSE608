@@ -244,10 +244,11 @@ flutter build web --release
 | updatedAt | TEXT | วันที่อัพเดท (ISO8601) |
  
 ---
+
 ## 👨‍💻 ผู้พัฒนา (Developer)
  
-**ชื่อ-นามสกุล:** ธนภัทร นุกูล  
-**รหัสนักศึกษา:** 67543210031-0 
+**ชื่อ-นามสกุล:** ธนภัทร นุกูล <br>
+**รหัสนักศึกษา:** 67543210031-0 <br>
 **วิชา:** Mobile Devices Application Design and Development
 
 ---
