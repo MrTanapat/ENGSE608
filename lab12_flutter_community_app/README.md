@@ -135,6 +135,17 @@ lib/
    # ไฟล์จะอยู่ที่:
    # build/app/outputs/flutter-apk/app-release.apk
    ```
+## 📥 ดาวน์โหลด
+
+### APK File (Android)
+- [ดาวน์โหลด APK v1.0.0 (ARM64)](https://drive.google.com/file/d/1ycKshU2Dd5E4OYmyTD6L6apFnuLC9yim/view?usp=sharing)
+- ขนาดไฟล์: ~30 MB
+- รองรับ: Android 6.0+
+
+### วิธีติดตั้ง
+1. ดาวน์โหลด APK
+2. เปิด Settings → Security → อนุญาต "Install from unknown sources"
+3. เปิดไฟล์ APK และติดตั้ง
  
 ---
  
